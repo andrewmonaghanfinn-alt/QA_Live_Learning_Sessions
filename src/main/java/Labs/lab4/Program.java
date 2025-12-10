@@ -22,6 +22,9 @@ public class Program {
 
         multiplicationTable();
 
+
+
+
     }
 
     static int findSum(int[] array) {
