@@ -1,4 +1,4 @@
-package Labs.oo2;
+package Labs.lab03a;
 
 import java.awt.*;
 import java.awt.event.*;

@@ -1,6 +1,6 @@
 package Labs;
 
-public class lab01_1 {
+public class lab01a {
     public static void main(String[] args) {
         System.out.println("Hello, world!");
     }
