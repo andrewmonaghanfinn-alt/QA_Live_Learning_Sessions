@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -12,7 +13,7 @@ import java.util.TimerTask;
 public class Game extends Canvas {
 
     public static void main(String[] args) {
-        //Game game = new Game();
+        Game game = new Game();
 
 
         String name = "Bobert";
@@ -50,9 +51,16 @@ public class Game extends Canvas {
 // create an array of 3 balls
 // call this array balls
 
-    Shape[] shapes = { new Shape(150, 150, 10, 10, 10, 5, ShapeType.Oval), new Shape(250, 250, 10, 10, -4, -20, ShapeType.Arc), new Shape(50, 50, 10, 10, 10, 19, ShapeType.ThreeDRectangle)};
 
 
+
+
+//    { new Shape(150, 150, 10, 10, 10, 5,
+//            ShapeType.Oval), new Shape(250, 250, 10, 10, -4, -20,
+//            ShapeType.Arc), new Shape(50, 50, 10, 10, 10, 19, ShapeType.ThreeDRectangle)};
+
+
+    ArrayList<Shape> shapes = new ArrayList<>();
 
     Game() {
 
@@ -80,6 +88,12 @@ public class Game extends Canvas {
                 tt.cancel();
             }
         });
+
+        shapes.add(new Shape(150, 150, 10, 10, 10, 5, ShapeType.Oval));
+        shapes.add(new Shape(250, 250, 10, 10, -4, -20, ShapeType.Arc));
+        shapes.add(new Shape(50, 50, 10, 10, 10, 19, ShapeType.ThreeDRectangle));
+
+
     }
 
     public void draw() {
