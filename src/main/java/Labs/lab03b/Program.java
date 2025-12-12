@@ -7,9 +7,24 @@ public class Program {
     public static void main(String[] args) {
 
         ArrayList<Vehicle> vehicles = new ArrayList<>();
-        vehicles.add(new Vehicle(0, 1));
-        vehicles.add(new Vehicle(0, 2));
-        vehicles.add(new Vehicle(0, 3));
+
+        try {
+            vehicles.add(new Vehicle(0, 1));
+            vehicles.add(new Vehicle(0, 2));
+            vehicles.add(new Vehicle(0, 3));
+            vehicles.add(new Vehicle(0, 1));
+            vehicles.add(new Vehicle(0, 2));
+            vehicles.add(new Vehicle(0, 3));
+            vehicles.add(new Vehicle(0, 1));
+            vehicles.add(new Vehicle(0, 2));
+            vehicles.add(new Vehicle(0, 3));
+            vehicles.add(new Vehicle(0, 1));
+            vehicles.add(new Vehicle(0, 2));
+            vehicles.add(new Vehicle(0, 3)); //this one will trigger the exception
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Could not instantiate new vehicle: " + e.getMessage());
+        }
+        //the rest of the code still continues tho which is kind of a problem
 
         for (Vehicle v : vehicles) {
             System.out.println(v.getDetails());
@@ -97,6 +112,11 @@ class RegistrationPlateFactory {
     };
 
     static RegistrationPlate getNextRegistrationPlate() {
+
+        if (regPlateIndex == registrationPlates.length) {
+            throw new ArrayIndexOutOfBoundsException("no unique number plates available");
+        }
+
         return new RegistrationPlate(registrationPlates[regPlateIndex++]);
     }
 
