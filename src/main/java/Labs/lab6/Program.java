@@ -14,15 +14,16 @@ public class Program {
             account01.withdraw(1000);
         } catch (IllegalArgumentException e) {
             System.out.println("Transaction failed: " + e.getMessage());
+            try {
+                log(e.getMessage());
+            } catch (IOException ex) {
+                System.out.println(e.getMessage());
+            }
         } finally {
             account01 = null;
         }
 
-        try {
-            log("test");
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
+
     }
 
 
