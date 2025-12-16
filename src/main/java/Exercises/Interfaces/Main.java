@@ -51,7 +51,7 @@ class Item {
 
 class ShoppingCart {
     private ArrayList<Item> cart;
-    PaymentStrategy paymentStrategy;
+    private PaymentStrategy paymentStrategy;
     ShoppingCart(PaymentStrategy paymentStrategy) {
         cart = new ArrayList<>();
         this.paymentStrategy = paymentStrategy;
