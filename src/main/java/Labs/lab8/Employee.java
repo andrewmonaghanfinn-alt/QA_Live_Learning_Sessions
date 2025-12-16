@@ -20,6 +20,10 @@ public class Employee {
         Employee e04 = new Employee("Jane", "Sales Rep");
         m01.addEmployee(e04);
 
+        //it is possible to add a manager instance to a manager's employee collection
+        //however it won't be recognised as a manager for the purposes of the list
+        m01.addEmployee(new Manager("Schlobert", "Scamager"));
+
         SkilledWorker e05 = new SkilledWorker("Jessica", "Consultant");
         m01.addEmployee(e05);
         e05.addSkill("Client relations");
@@ -76,6 +80,7 @@ class Manager extends Employee{
     public ArrayList<Employee> getEmployees() {
         return employees;
     }
+    @Override
     public String getInfo() {
         StringBuilder output = new StringBuilder(super.getInfo() + "\n");
         for (Employee emp : employees) {
@@ -96,11 +101,9 @@ class SkilledWorker extends Employee{
     public void addSkill(String skill) {
         skills.add(skill);
     }
-
+    @Override
     public String getInfo() {
-        String output = super.getInfo();
-        output += getSkills();
-        return output;
+        return super.getInfo() + getSkills();
     }
 
     public String getSkills() {
