@@ -16,15 +16,11 @@ public class Program {
         accounts.add(new Account(500, "Linda", 3000));
         accounts.add(new Account(300, "David", 2000));
 
-        for (Account account : accounts) {
-            System.out.println(account.getDetails());
-        }
+        accounts.forEach((account) -> System.out.println(account.getDetails()));
 
         Collections.sort(accounts);
 
-        for (Account account : accounts) {
-            System.out.println(account.getDetails());
-        }
+        accounts.forEach((account) -> System.out.println(account.getDetails()));
     }
 
 
