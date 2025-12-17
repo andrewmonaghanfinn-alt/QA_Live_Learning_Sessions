@@ -1,4 +1,4 @@
-package Labs.lab9;
+package Labs.lab10a;
 
 import java.util.ArrayList;
 
@@ -12,10 +12,10 @@ public class Program {
 
         for (Animal animal : animals) {
             System.out.println("This is a " + animal.getName().toLowerCase());
-            if (animal instanceof Bird) {
-                ((Bird) animal).makeNest();
-            } else if (animal instanceof Fish) {
-                ((Fish) animal).swim();
+            if (animal instanceof Flyable) {
+                ((Flyable) animal).fly();
+            } else if (animal instanceof Swimmable) {
+                ((Swimmable) animal).swim();
             }
         }
 
@@ -44,21 +44,23 @@ abstract class Animal {
     }
 }
 
-abstract class Bird extends Animal {
+abstract class Bird extends Animal implements Moveable, Flyable{
     Bird(AnimalType animalType, String name) {
         super(animalType, name);
     }
-    public abstract void makeNest();
 }
 
 class Duck extends Bird {
     Duck(AnimalType animalType, String name) {
         super(animalType, name);
     }
-    @Override
-    public void makeNest() {
-        System.out.println(getName() + " is making nest by the lake...");
+    public void move() {
+        System.out.println("Moving like a " + getName().toLowerCase());
     }
+    public void fly() {
+        System.out.println("Flying like a " + getName().toLowerCase());
+    }
+
 
 }
 
@@ -66,27 +68,40 @@ class Penguin extends Bird {
     Penguin(AnimalType animalType, String name) {
         super(animalType, name);
     }
-    @Override
-    public void makeNest() {
-        System.out.println(getName() + " is making nest on the rocks...");
+    public void move() {
+        System.out.println("Moving like a " + getName().toLowerCase());
     }
-
+    public void fly() {
+        System.out.println("Flying like a " + getName().toLowerCase());
+    }
 }
 
-abstract class Fish extends Animal {
+abstract class Fish extends Animal implements Moveable, Swimmable {
     Fish(AnimalType animalType, String name) {
         super(animalType, name);
     }
-    public abstract void swim();
-
 }
 
 class Tuna extends Fish {
     Tuna(AnimalType animalType, String name) {
         super(animalType, name);
     }
-    @Override
-    public void swim() {
-        System.out.println(getName() + " is swimming...");
+    public void move() {
+        System.out.println("Moving like a " + getName().toLowerCase());
     }
+    public void swim() {
+        System.out.println("Swimming like a " + getName().toLowerCase());
+    }
+}
+
+interface Swimmable {
+    public void swim();
+}
+
+interface Flyable {
+    public void fly();
+}
+
+interface Moveable {
+    public void move();
 }
