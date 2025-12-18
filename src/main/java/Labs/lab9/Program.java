@@ -49,6 +49,17 @@ abstract class Bird extends Animal {
         super(animalType, name);
     }
     public abstract void makeNest();
+    public void speak() {
+
+    }
+}
+
+abstract class Fish extends Animal {
+    Fish(AnimalType animalType, String name) {
+        super(animalType, name);
+    }
+    public abstract void swim();
+
 }
 
 class Duck extends Bird {
@@ -70,14 +81,6 @@ class Penguin extends Bird {
     public void makeNest() {
         System.out.println(getName() + " is making nest on the rocks...");
     }
-
-}
-
-abstract class Fish extends Animal {
-    Fish(AnimalType animalType, String name) {
-        super(animalType, name);
-    }
-    public abstract void swim();
 
 }
 

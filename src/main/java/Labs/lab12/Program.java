@@ -8,13 +8,13 @@ public class Program {
 //        try {
 //            courses = readCSV("src/main/java/Labs/lab12/course.txt");
 //        } catch (IOException e) {
-//            System.out.println("idk bro probably wrong path ig");
+//            System.out.println("probably wrong path ig");
 //        }
 //        String[] trainers = new String[0];
 //        try {
 //            trainers = readCSV("src/main/java/Labs/lab12/trainer.txt");
 //        } catch (IOException e) {
-//            System.out.println("idk bro probably wrong path ig");
+//            System.out.println("probably wrong path ig");
 //        }
         String[] trainersAndCourses = new String[1];
         trainersAndCourses[0] = "Error test";
@@ -22,12 +22,12 @@ public class Program {
         try {
             writeCSV("src/main/java/Labs/lab12/trainer.txt", "src/main/java/Labs/lab12/course.txt");
         } catch (IOException e) {
-            System.out.println("idk bro probably wrong path ig: " + e.getMessage());
+            System.out.println("probably wrong path ig: " + e.getMessage());
         }
         try {
             trainersAndCourses = readCSV("src/main/java/Labs/lab12/trainersAndCourses.txt");
         } catch (IOException e) {
-            System.out.println("idk bro probably wrong path ig: " + e.getMessage());
+            System.out.println("probably wrong path ig: " + e.getMessage());
         } finally {
             for (String s : trainersAndCourses) {
                 System.out.println(s);
@@ -47,8 +47,6 @@ public class Program {
         } else {
             return new String[0]; //if its empty just return an empty array, weird that there isn't a static for this
         }
-
-
     }
     private static void writeCSV(String inFileTrainer, String inFileCourse) throws IOException {
         FileWriter writer = new FileWriter("src/main/java/Labs/lab12/trainersAndCourses.txt");

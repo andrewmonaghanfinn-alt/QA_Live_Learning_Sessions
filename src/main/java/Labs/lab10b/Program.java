@@ -73,7 +73,7 @@ class Account implements Comparable<Account> {
 
     @Override
     public int compareTo(Account other) {
-        return (int)(this.balance - other.balance);
+        return Double.compare(this.balance, other.balance);
     }
 }
 

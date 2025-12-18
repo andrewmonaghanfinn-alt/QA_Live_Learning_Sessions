@@ -34,6 +34,8 @@ public class JSONWriter {
 
 
         //lowk this is nice, u can use a tryblock that has "try-with-resources" and it will auto close
+
+
         try (FileWriter writer = new FileWriter((filePath))){
             gsonBuilder.toJson(students, writer);
         } catch (IOException e) {
