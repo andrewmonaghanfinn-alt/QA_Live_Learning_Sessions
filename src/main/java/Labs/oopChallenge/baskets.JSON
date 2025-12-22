@@ -1,0 +1,82 @@
+[
+  {
+    "product": {
+      "id": 6417,
+      "name": "Beans",
+      "price": 0.95
+    },
+    "quantity": 6
+  },
+  {
+    "product": {
+      "id": 2181,
+      "name": "Tiger loaf",
+      "price": 1.55
+    },
+    "quantity": 13
+  },
+  {
+    "product": {
+      "id": 8930,
+      "name": "Mild cheddar",
+      "price": 3.0
+    },
+    "quantity": 8
+  },
+  {
+    "product": {
+      "id": 4174,
+      "name": "Broccoli",
+      "price": 0.45
+    },
+    "quantity": 15
+  },
+  {
+    "product": {
+      "id": 8786,
+      "name": "Chocolate cake",
+      "price": 2.95
+    },
+    "quantity": 19
+  },
+  {
+    "product": {
+      "id": 9035,
+      "name": "Mince pies",
+      "price": 1.45
+    },
+    "quantity": 4
+  },
+  {
+    "product": {
+      "id": 7364,
+      "name": "Washing-up liquid",
+      "price": 1.8
+    },
+    "quantity": 3
+  },
+  {
+    "product": {
+      "id": 3593,
+      "name": "Toilet paper",
+      "price": 2.0
+    },
+    "quantity": 1
+  },
+  {
+    "product": {
+      "id": 5332,
+      "name": "Roast chicken",
+      "price": 4.95
+    },
+    "quantity": 18
+  },
+  {
+    "product": {
+      "id": 9762,
+      "name": "Potatoes",
+      "price": 0.75
+    },
+    "quantity": 14
+  }
+]
