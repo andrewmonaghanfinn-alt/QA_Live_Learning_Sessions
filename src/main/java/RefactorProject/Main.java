@@ -50,15 +50,7 @@ public class Main {
         System.out.println("=== Animals ===");
 
         for (Animal a : animals) {
-            if (a instanceof Dog) {
-                ((Dog)a).doBehaviour();
-            } else if (a instanceof Cat) {
-                ((Cat)a).doBehaviour();
-            } else if (a instanceof Rabbit) {
-                ((Rabbit)a).doBehaviour();
-            } else {
-                a.doBehaviour();
-            }
+            a.doBehaviour();
             System.out.println();
         }
 
