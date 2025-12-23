@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Rex",
+    "legs": 4,
+    "food": "bone"
+  },
+  {
+    "name": "Lune",
+    "legs": 4,
+    "food": "fish"
+  },
+  {
+    "name": "Hazel",
+    "legs": 4,
+    "food": "carrot"
+  }
+]
